@@ -1,0 +1,268 @@
+{
+  "name": "rob",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "EmVpc",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "chance",
+      "min": "0",
+      "max": "100",
+      "name": "Generate Random Number"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "1",
+      "varName": "chance",
+      "comparison": "3",
+      "value": "70",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "chance",
+      "comparison": "4",
+      "value": "80",
+      "iftrue": "2",
+      "iftrueVal": "22",
+      "iffalse": "2",
+      "iffalseVal": "33",
+      "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geldOPFER",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geldKING",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "randomnummer",
+      "min": "0",
+      "max": "2000",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "randomnummer",
+      "comparison": "4",
+      "value": "tempVars(\"geldOPFER\")",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "OPFER1",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "OPFER1",
+      "comparison": "2",
+      "value": "member",
+      "iftrue": "2",
+      "iftrueVal": "20",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "FirstNumber": "${tempVars(\"geldOPFER\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"randomnummer\")}",
+      "storage": "1",
+      "varName": "geldresultopfer",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"geldKING\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"randomnummer\")}",
+      "storage": "1",
+      "varName": "geldresultKING",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"geldresultopfer\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"geldresultKING\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${mentionedUser},\n${member} hat dich ausgeraubt und hat dir **$${tempVars(\"randomnummer\")}** gestohlen.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Dein Opfer hat zu wenig Geld, ${member}.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Du kannst dich nicht selber ausrauben, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "RäuberID",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geldKINGStrafe",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "moneyBank",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "geldKINGStrafe",
+      "comparison": "4",
+      "value": "1999",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "FirstNumber": "${tempVars(\"geldKINGStrafe\")}",
+      "info": "1",
+      "SecondNumber": "2000",
+      "storage": "1",
+      "varName": "GeldStarfeResult",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"GeldStarfeResult\")",
+      "name": "Control Member Data"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "FirstNumber": "${tempVars(\"moneyBank\")}",
+      "info": "1",
+      "SecondNumber": "2000",
+      "storage": "1",
+      "varName": "GeldStarfeResultBANK",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "0",
+      "value": "tempVars(\"GeldStarfeResultBANK\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Man hat dich erwischt, ${member}!**\nDir wurden **$2000** abgezogen.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Mission fehlgeschalgen, ${member}!**\nVersuche es später nocheinmal.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "_timeRestriction": 1800
+}

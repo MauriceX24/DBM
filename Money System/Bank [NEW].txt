@@ -1,0 +1,314 @@
+{
+  "name": "bank",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hfGfF",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "add/rem/show",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "MoneyAmount",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "add/rem/show",
+      "comparison": "1",
+      "value": "add",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "add/rem/show",
+      "comparison": "1",
+      "value": "remove",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "add/rem/show",
+      "comparison": "1",
+      "value": "show",
+      "iftrue": "2",
+      "iftrueVal": "27",
+      "iffalse": "2",
+      "iffalseVal": "39",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "¦¦¦¦ ADD ¦¦¦¦¦",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "MoneyNow.ADD",
+      "name": "Store Member Data"
+    },
+    {
+      "into": "0",
+      "vAria": "${tempVars(\"MoneyAmount\")}",
+      "storage": "1",
+      "varName2": "Money.int",
+      "name": "Convert a Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Money.int",
+      "comparison": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Variable Type"
+    },
+    {
+      "storage": "1",
+      "varName": "Money.int",
+      "comparison": "4",
+      "value": "tempVars(\"MoneyNow.ADD\")",
+      "iftrue": "2",
+      "iftrueVal": "33",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "1",
+      "value": "+tempVars(\"MoneyAmount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"MoneyNow.ADD\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"MoneyAmount\")}",
+      "storage": "1",
+      "varName": "MoneyNOW.Result",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"MoneyNOW.Result\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Es wurden **$${tempVars(\"MoneyAmount\")}** zu deinem Bankkonto hinzugefügt, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "¦¦¦¦ REMOVE ¦¦¦¦¦",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "BankNow.remove",
+      "name": "Store Member Data"
+    },
+    {
+      "into": "0",
+      "vAria": "${tempVars(\"MoneyAmount\")}",
+      "storage": "1",
+      "varName2": "Bank.int",
+      "name": "Convert a Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Bank.int",
+      "comparison": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "37",
+      "name": "Check Variable Type"
+    },
+    {
+      "storage": "1",
+      "varName": "Bank.int",
+      "comparison": "4",
+      "value": "tempVars(\"BankNow.remove\")",
+      "iftrue": "2",
+      "iftrueVal": "33",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "1",
+      "value": "-tempVars(\"MoneyAmount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"BankNow.remove\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"MoneyAmount\")}",
+      "storage": "1",
+      "varName": "BankNOW.Result",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "changeType": "0",
+      "value": "tempVars(\"BankNOW.Result\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "+tempVars(\"MoneyAmount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Es wurden **$${tempVars(\"MoneyAmount\")}** von deinem Bankkonto entfernt, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "¦¦¦¦ SHOW ¦¦¦¦¦",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "Money.Show",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "Bank.Show",
+      "name": "Store Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**» Konto von ${member} «**\nMoney > $${tempVars(\"Money.Show\")}\nBank  > $${tempVars(\"Bank.Show\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "¦¦¦¦ ERRORS ¦¦¦¦¦",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x:¦ Du hast zu wenig Geld, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x:¦ Wieviel möchtest du übertragen, ${member}?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x:¦ `${tempVars(\"MoneyAmount\")}` ist keine gültige Zahl, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "** » Help Guide « **\n`bank add 200` - Fügt 200 zu deinem Bankkonto hinzu\n`bank remove 200` - Entfernt 200 von deinem Bankkonto\n`bank show` - Zeigt dein allgemeines Konto",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}

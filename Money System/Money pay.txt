@@ -1,0 +1,140 @@
+{
+  "name": "pay",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "EzvKH",
+  "actions": [
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "userxyz",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "userxyz",
+      "comparison": "2",
+      "value": "member",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geldautor",
+      "name": "Store Member Data"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "geldautor",
+      "comparison": "3",
+      "value": "tempVars(\"amount\")",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "14",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "gelduser2",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"geldautor\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"amount\")}",
+      "storage": "1",
+      "varName": "result-autor",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"result-autor\")",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"gelduser2\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"amount\")}",
+      "storage": "1",
+      "varName": "result-user2",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"result-user2\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${mentionedUser},\n${member} hat dir soeben **$${tempVars(\"amount\")}** überwiesen.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Du hast nicht genug Geld, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Du kannst dir selber kein Geld überweisen!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

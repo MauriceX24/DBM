@@ -1,0 +1,69 @@
+{
+  "name": "money",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "mmuGw",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "text",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "author",
+      "name": "Store Message Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "messages",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "messages",
+      "comparison": "1",
+      "value": "10",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "emoji": "4",
+      "varName2": "??",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "20",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "messages",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    }
+  ],
+  "comType": "3"
+}
