@@ -1,0 +1,209 @@
+{
+  "name": "fts",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "vzNWF",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "Num.Smiley",
+      "min": "1",
+      "max": "10",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "name": "Create List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "(\"|| :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\")",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: || || :bomb: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "addType": "0",
+      "position": "",
+      "value": "\"|| :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :bomb: || || :smile: ||\"",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "FTS.List",
+      "name": "Save Variable"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "918FF0",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "**Find the Smiley**",
+      "message": "_loading..._",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "MessageObject",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "list": "8",
+      "varName": "FTS.List",
+      "getType": "3",
+      "position": "${tempVars(\"Num.Smiley\")}",
+      "storage": "1",
+      "varName2": "FTS.Item",
+      "name": "Get Item from List"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "918FF0",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed1.2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1.2",
+      "fieldName": "**Find the Smiley**",
+      "message": "${tempVars(\"FTS.Item\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "MessageObject",
+      "storage2": "1",
+      "varName2": "embed1.2",
+      "name": "Edit Embed"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}

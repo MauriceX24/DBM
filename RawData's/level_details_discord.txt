@@ -1,0 +1,350 @@
+
+
+{
+  "name": "mylevel",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Vusvz",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "mylevel",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "exp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "myxp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "level",
+      "defaultVal": "1",
+      "storage": "1",
+      "varName2": "mylvl",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"mylvl\")}",
+      "info": "2",
+      "SecondNumber": "5",
+      "storage": "1",
+      "varName": "exp to next level",
+      "name": "Basic Math Operation"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "//100 * tempVars(\"myxp\") / tempVars(\"exp to next level\")%\n\nvar input = 100; //Deine Zahl\nvar expo = tempVars(\"myxp\"); //Dein Exponent\nvar expo2 = tempVars(\"exp to next level\"); //Dein Exponent\nvar result = (input * expo / expo2);\nresult //Gibt das Ergebnis zurück",
+      "storage": "1",
+      "varName": "test2",
+      "name": "Run Script"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "Usertag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "userPic",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "Levelstats by ${tempVars(\"Usertag\")}",
+      "color": "FF006E",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "${tempVars(\"userPic\")}",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Level",
+      "message": "${tempVars(\"mylevel\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "comment": "████████████ Progressbar ██████████████",
+      "color": "#ff3198",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "99",
+      "iftrue": "2",
+      "iftrueVal": "39",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [█](https://imgur.com/a/HT2qQvo)████████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "89",
+      "iftrue": "2",
+      "iftrueVal": "36",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [██](https://imgur.com/a/HT2qQvo)████████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "79",
+      "iftrue": "2",
+      "iftrueVal": "33",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [███](https://imgur.com/a/HT2qQvo)███████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "69",
+      "iftrue": "2",
+      "iftrueVal": "30",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [████](https://imgur.com/a/HT2qQvo)██████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "59",
+      "iftrue": "2",
+      "iftrueVal": "27",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [█████](https://imgur.com/a/HT2qQvo)█████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "49",
+      "iftrue": "2",
+      "iftrueVal": "24",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [██████](https://imgur.com/a/HT2qQvo)████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "39",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [███████](https://imgur.com/a/HT2qQvo)███ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "29",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [████████](https://imgur.com/a/HT2qQvo)██ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "19",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [█████████](https://imgur.com/a/HT2qQvo)█ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "storage": "1",
+      "varName": "test2",
+      "comparison": "4",
+      "value": "9",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "2",
+      "iffalseVal": "42",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [██████████](https://imgur.com/a/HT2qQvo) ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Stats",
+      "message": "${tempVars(\"mylvl\")} [░](https://imgur.com/a/HT2qQvo)██████████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
