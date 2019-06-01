@@ -1,0 +1,162 @@
+{
+  "name": "ticket",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "FPLSm",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "text",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Please describe your ticket with more details!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "ticket.num",
+      "min": "1",
+      "max": "9999",
+      "name": "Generate Random Number"
+    },
+    {
+      "channelName": "ticket-${tempVars(\"ticket.num\")}",
+      "categoryID": "583907239945830420",
+      "topic": "${tempVars(\"text\")}",
+      "position": "",
+      "storage": "1",
+      "varName": "ticket.channel",
+      "name": "Create Text Channel"
+    },
+    {
+      "comment": "¦¦¦ ? Set your ID for Category ?",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "5",
+      "varName": "ticket.channel",
+      "message": "Ticket created by ${member}\n```\n${tempVars(\"text\")}\n```\nYou can close this ticket with `[p]ticketclose ${tempVars(\"ticket.num\")} (Reason)`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "ticket.owner",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket-${tempVars(\"ticket.num\")}",
+      "changeType": "0",
+      "value": "tempVars(\"text\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket-${tempVars(\"ticket.num\")}.owner",
+      "changeType": "0",
+      "value": "tempVars(\"ticket.owner\")",
+      "name": "Control Server Data"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Your ticket was successful created in ${tempVars(\"ticket.channel\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "Usertag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "Userpic",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "Ticket #${tempVars(\"ticket.num\")}",
+      "author": "${tempVars(\"Usertag\")}",
+      "color": "GREEN",
+      "url": "",
+      "authorIcon": "${tempVars(\"Userpic\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "message": "${tempVars(\"text\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "channel": "6",
+      "varName2": "ticket.log",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

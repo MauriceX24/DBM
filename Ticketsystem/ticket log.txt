@@ -1,0 +1,53 @@
+{
+  "name": "ticketlog",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "AAaee",
+  "actions": [
+    {
+      "info": "4",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "ticket.log",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "2",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Which Channel did you mean?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "ticket.log",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Ticket-Log was set to: ${serverVars(\"ticket.log\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}

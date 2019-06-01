@@ -1,0 +1,92 @@
+{
+  "name": "ticketinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "AyOEQ",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "ticket.num",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "ticket.num",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Which ticket did you mean?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket-${tempVars(\"ticket.num\")}",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "`?`| Ticket #${tempVars(\"ticket.num\")} doesn't exist",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket-${tempVars(\"ticket.num\")}",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ticket.detail",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket-${tempVars(\"ticket.num\")}.owner",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "ticket.detail2",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**» Ticket #${tempVars(\"ticket.num\")}**\n`${tempVars(\"ticket.detail\")}`\n\nCreated by ${tempVars(\"ticket.detail2\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
