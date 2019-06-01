@@ -1,0 +1,249 @@
+{
+  "name": "ban",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "oTVNv",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "BAN_MEMBERS",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "22",
+      "name": "Check Member Permissions"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "20",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "24",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "varName2": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "26",
+      "name": "Check If Member"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "Kick.Usertag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "Moderator.ID",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "Sicher?",
+      "author": "",
+      "color": "FFBF00",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed1.Sure?",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?",
+      "message": "Bist du sicher, dass du **${tempVars(\"Kick.Usertag\")}** aufgrund von `${tempVars(\"reason\")}`\nbannen möchtest?",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "1",
+      "varName3": "Embed1.Sure?.A",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?.A",
+      "emoji": "4",
+      "varName2": "?",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?.A",
+      "filter": "reaction.emoji.name === '?' && user.id === '${tempVars(\"Moderator.ID\")}'",
+      "max": "1",
+      "time": "30000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "28",
+      "storage2": "0",
+      "varName2": "Reactions",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "comment": "¦¦¦ Embed",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "title": "User gebannt",
+      "author": "",
+      "color": "GREEN",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed1.Kicked",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Kicked",
+      "message": "**${tempVars(\"Kick.Usertag\")}** wurde aufgrund von `${tempVars(\"reason\")}` gebanntt",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?.A",
+      "storage2": "1",
+      "varName2": "Embed1.Kicked",
+      "name": "Edit Embed"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "${tempVars(\"reason\")}",
+      "name": "Ban Member"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "¦¦¦ ERRORS",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Welchen User möchtest du bannen, ${member}?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Du hast keine Rechte dafür, ${member}?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Weshalb möchtest du den User bannen, ${member}?",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Ich kann diesen User nicht bannen, ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Vorgang abgebrochen",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed.Kick.X",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed.Kick.X",
+      "message": "**${tempVars(\"Kick.Usertag\")}** wurde nicht gebannt",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed1.Sure?.A",
+      "storage2": "1",
+      "varName2": "Embed.Kick.X",
+      "name": "Edit Embed"
+    }
+  ]
+}
