@@ -1,0 +1,107 @@
+{
+  "name": "warns",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "xPeHb",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "warns",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "Warn-Points",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "Warn-Points",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "FFE100",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed-bad",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-bad",
+      "fieldName": "User",
+      "message": "${member}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-bad",
+      "fieldName": "Verwarnungen",
+      "message": "${tempVars(\"Warn-Points\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-bad",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "GREEN",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Embed-good",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-good",
+      "fieldName": "User",
+      "message": "${member}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-good",
+      "fieldName": "Verwarnungen",
+      "message": "${tempVars(\"Warn-Points\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-good",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
