@@ -1,0 +1,52 @@
+{
+  "name": "Stats - Server +",
+  "temp": "600",
+  "event-type": "3",
+  "_id": "YDKcz",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-servcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-server.vc",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "tosend": "Server Count Channel doesn't exist!\nDo [p]setstats <ID>",
+      "name": "Send Message to Console"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "Guilds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-server.vc",
+      "channelType": "1",
+      "toChange": "0",
+      "newState": "Server: ${tempVars(\"Guilds\")}",
+      "name": "Edit Channel"
+    }
+  ]
+}

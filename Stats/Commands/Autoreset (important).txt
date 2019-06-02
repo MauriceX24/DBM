@@ -1,0 +1,29 @@
+{
+  "name": "resetstats",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "suAVE",
+  "actions": [
+    {
+      "storage": "4",
+      "varName": "stat-mem.vc",
+      "name": "Delete Channel"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-bot.vc",
+      "name": "Delete Channel"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-server.vc",
+      "name": "Delete Channel"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-hum.vc",
+      "name": "Delete Channel"
+    }
+  ],
+  "comType": "0"
+}

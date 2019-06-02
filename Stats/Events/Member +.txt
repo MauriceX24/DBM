@@ -1,0 +1,156 @@
+{
+  "name": "Stats - Member Join",
+  "temp": "",
+  "event-type": "6",
+  "_id": "uezNo",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-memcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "8",
+      "name": "Check Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-mem.vc",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "tosend": "Member Count Channel doesn't exist! \nDo [p]setstat",
+      "name": "Send Message to Console"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "MemberCount",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-mem.vc",
+      "channelType": "1",
+      "toChange": "0",
+      "newState": "Member: ${tempVars(\"MemberCount\")}",
+      "name": "Edit Channel"
+    },
+    {
+      "comment": "=== Bot Counter ===",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-botcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-bot.vc",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "tosend": "Member Count Channel doesn't exist! \nDo [p]setstat",
+      "name": "Send Message to Console"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "34",
+      "storage": "1",
+      "varName2": "BotCount",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-bot.vc",
+      "channelType": "1",
+      "toChange": "0",
+      "newState": "Bots: ${tempVars(\"BotCount\")}",
+      "name": "Edit Channel"
+    },
+    {
+      "comment": "=== Humans Count ===",
+      "color": "#ffffff",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-humcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-hum.vc",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "tosend": "Human Count Channel doesn't exist! \nDo [p]setstat",
+      "name": "Send Message to Console"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "HumanCount",
+      "name": "Store Server Info"
+    },
+    {
+      "storage": "4",
+      "varName": "stat-hum.vc",
+      "channelType": "1",
+      "toChange": "0",
+      "newState": "Humans: ${tempVars(\"HumanCount\")}",
+      "name": "Edit Channel"
+    }
+  ]
+}

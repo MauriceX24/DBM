@@ -1,0 +1,448 @@
+{
+  "name": "setstats",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "ldRbc",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "Stats.CategoryID",
+      "name": "Store Command Params"
+    },
+    {
+      "source": "suAVE",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Please insert a valid Category-ID**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "Stats.CategoryID",
+      "name": "Save Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "MemberID",
+      "name": "Store Member Info"
+    },
+    {
+      "comment": "¦¦¦ Member Count",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Membercount?**\n_Write `y` to enable this_\nor\n_Write `n` to disable this_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.startsWith('') && author.id === '${tempVars(\"MemberID\")}'",
+      "max": "1",
+      "time": "15000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "54",
+      "storage2": "1",
+      "varName2": "Answer.MemCount",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "Answer.MemCount",
+      "comparison": "1",
+      "value": "y",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-memcount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-memcount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "comment": "¦¦¦ Bot Count",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Botscount?**\n_Write `y` to enable this_\nor\n_Write `n` to disable this_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.startsWith('') && author.id === '${tempVars(\"MemberID\")}'",
+      "max": "1",
+      "time": "15000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "54",
+      "storage2": "1",
+      "varName2": "Answer.MemCount",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "Answer.MemCount",
+      "comparison": "1",
+      "value": "y",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-botcount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-botcount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "comment": "¦¦¦ Servers Count",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Serverscount?**\n_Write `y` to enable this_\nor\n_Write `n` to disable this_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.startsWith('') && author.id === '${tempVars(\"MemberID\")}'",
+      "max": "1",
+      "time": "15000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "54",
+      "storage2": "1",
+      "varName2": "Answer.MemCount",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "Answer.MemCount",
+      "comparison": "1",
+      "value": "y",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-servcount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-servcount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "comment": "¦¦¦ Humans Count",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Humancount?**\n_Write `y` to enable this_\nor\n_Write `n` to disable this_",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.startsWith('') && author.id === '${tempVars(\"MemberID\")}'",
+      "max": "1",
+      "time": "15000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "54",
+      "storage2": "1",
+      "varName2": "Answer.MemCount",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "1",
+      "varName": "Answer.MemCount",
+      "comparison": "1",
+      "value": "y",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-humcount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "count": "1",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-humcount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "comment": "¦¦¦ soon....",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-memcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "Members",
+      "name": "Store Server Info"
+    },
+    {
+      "channelName": "Member: ${tempVars(\"Members\")}",
+      "categoryID": "${serverVars(\"Stats.CategoryID\")}",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "2",
+      "varName": "stat-mem.vc",
+      "name": "Create Voice Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-mem.vc",
+      "name": "Save Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-botcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "34",
+      "storage": "1",
+      "varName2": "Bots",
+      "name": "Store Server Info"
+    },
+    {
+      "channelName": "Bots: ${tempVars(\"Bots\")}",
+      "categoryID": "${serverVars(\"Stats.CategoryID\")}",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "2",
+      "varName": "stat-bot.vc",
+      "name": "Create Voice Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-bot.vc",
+      "name": "Save Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-servcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Server Data"
+    },
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "Guilds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "channelName": "Servers: ${tempVars(\"Guilds\")}",
+      "categoryID": "${serverVars(\"Stats.CategoryID\")}",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "2",
+      "varName": "stat-server.vc",
+      "name": "Create Voice Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-server.vc",
+      "name": "Save Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stat-humcount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "35",
+      "storage": "1",
+      "varName2": "Humans",
+      "name": "Store Server Info"
+    },
+    {
+      "channelName": "Humans: ${tempVars(\"Humans\")}",
+      "categoryID": "${serverVars(\"Stats.CategoryID\")}",
+      "bitrate": "",
+      "userLimit": "",
+      "storage": "2",
+      "varName": "stat-hum.vc",
+      "name": "Create Voice Channel"
+    },
+    {
+      "storage": "2",
+      "varName": "stat-hum.vc",
+      "name": "Save Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Time is up!**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
