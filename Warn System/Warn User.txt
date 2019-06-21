@@ -18,7 +18,7 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "15",
+      "iffalseVal": "25",
       "name": "Check Member Permissions"
     },
     {
@@ -28,7 +28,7 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "17",
+      "iffalseVal": "27",
       "name": "Check Parameters"
     },
     {
@@ -62,14 +62,23 @@
       "name": "Delete Message"
     },
     {
-      "title": "ª User verwarnt",
+      "title": "¬ª User warn",
       "author": "",
       "color": "FFE100",
-      "timestamp": "true",
       "url": "",
       "authorIcon": "",
+      "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
       "storage": "1",
       "varName": "Embed",
       "name": "Create Embed Message"
@@ -91,20 +100,19 @@
       "name": "Add Embed Field"
     },
     {
-      "storage": "1",
-      "varName": "Reason",
-      "comparison": "0",
-      "value": "",
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "3",
       "iffalseVal": "2",
-      "name": "Check Variable"
+      "name": "Check Parameters"
     },
     {
       "storage": "1",
       "varName": "Embed",
-      "fieldName": "Grund",
+      "fieldName": "Reason",
       "message": "${tempVars(\"Reason\")}",
       "inline": "1",
       "name": "Add Embed Field"
@@ -116,15 +124,15 @@
     {
       "storage": "1",
       "varName": "Embed",
-      "fieldName": "Grund",
-      "message": "Keinen Grund angegeben",
+      "fieldName": "Reason",
+      "message": "No reason",
       "inline": "1",
       "name": "Add Embed Field"
     },
     {
       "storage": "1",
       "varName": "Embed",
-      "message": "Gesamte Verwarnungen: ${tempVars(\"Warn-Points-Result\")}",
+      "message": "Infractions: ${tempVars(\"Warn-Points-Result\")}",
       "footerIcon": "",
       "name": "Set Embed Footer"
     },
@@ -138,12 +146,70 @@
       "name": "Send Embed Message"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.kick",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "auto.kick.value",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.ban",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "auto.ban.value",
+      "name": "Store Server Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "comparison": "1",
+      "value": "tempVars(\"auto.kick.value\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "Too many infractions (${tempVars(\"Warn-Points-Result\")})",
+      "name": "Kick Member"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "warns",
+      "comparison": "1",
+      "value": "tempVars(\"auto.ban.value\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "reason": "Too many infractions (${tempVars(\"Warn-Points-Result\")})",
+      "name": "Ban Member"
+    },
+    {
       "name": "End Action Sequence"
     },
     {
       "channel": "0",
       "varName": "",
-      "message": "`?`| Du hast keine Rechte daf¸r, ${member}!",
+      "message": "`‚ùå`| You don't have any permissions to use this command, ${member}!",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -156,7 +222,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "`?`| Welchen User mˆchtest du verwarnen?",
+      "message": "`‚ö†`| Which user did you mean?",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
