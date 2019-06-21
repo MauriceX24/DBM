@@ -61,7 +61,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "message": "Alle Verwarnungen von **${tempVars(\"Tag\")}** wurden gelöscht.",
+      "message": "All infractions by **${tempVars(\"Tag\")}** was deleted.",
       "name": "Set Embed Description"
     },
     {
@@ -95,7 +95,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "`?`| Du hast keine Rechte dafür, ${member}!",
+      "message": "`âŒ`| You don't have any permissions to use this command, ${member}!",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -108,7 +108,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "`?`| Von wem möchtest du die Verwarnungen löschen?",
+      "message": "`âš `| Which user did you like to clear?",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
