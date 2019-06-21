@@ -1,0 +1,86 @@
+{
+  "name": "MentionStop",
+  "temp": "msg",
+  "event-type": "2",
+  "_id": "eTCep",
+  "actions": [
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "6",
+      "storage": "1",
+      "varName2": "CountMSG",
+      "name": "Store Message Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "massmention",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "MassMentionStop",
+      "name": "Store Server Data"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "4",
+      "storage": "1",
+      "varName2": "MSGChannel",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "msg",
+      "info": "3",
+      "storage": "1",
+      "varName2": "MSGAuthor",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "MassMentionStop",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "CountMSG",
+      "comparison": "4",
+      "value": "tempVars(\"MassMentionStop\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "5",
+      "varName": "MSGChannel",
+      "message": "`⛔`| Too many pings, ${tempVars(\"MSGAuthor\")}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "2",
+      "varName": "MSGAuthor",
+      "dataName": "warns",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    }
+  ]
+}
