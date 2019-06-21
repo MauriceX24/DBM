@@ -1,0 +1,143 @@
+{
+  "name": "InviteBlocker",
+  "temp": "message",
+  "event-type": "2",
+  "_id": "APrDL",
+  "actions": [
+    {
+      "message": "1",
+      "varName": "message",
+      "info": "2",
+      "storage": "1",
+      "varName2": "text",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "message",
+      "info": "4",
+      "storage": "1",
+      "varName2": "channel1",
+      "name": "Store Message Info"
+    },
+    {
+      "message": "1",
+      "varName": "message",
+      "info": "3",
+      "storage": "1",
+      "varName2": "author",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discord.gg/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discord.me/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discord.io/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"disco.gg/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discordapp.com/invite\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discord.gg/invite\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"invite.gg/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "text",
+      "comparison": "5",
+      "value": "\"discord.plus/\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "message",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "5",
+      "varName": "channel1",
+      "message": "🚫 **We don't want to see your Invites, ${tempVars(\"author\")}!**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "2",
+      "varName": "author",
+      "dataName": "warns",
+      "changeType": "1",
+      "value": "+1",
+      "name": "Control Member Data"
+    }
+  ]
+}
