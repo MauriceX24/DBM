@@ -28,11 +28,20 @@
       "title": "",
       "author": "",
       "color": "FFE100",
-      "timestamp": "false",
       "url": "",
       "authorIcon": "",
+      "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
       "storage": "1",
       "varName": "Embed-bad",
       "name": "Create Embed Message"
@@ -48,7 +57,7 @@
     {
       "storage": "1",
       "varName": "Embed-bad",
-      "fieldName": "Verwarnungen",
+      "fieldName": "Infractions",
       "message": "${tempVars(\"Warn-Points\")}",
       "inline": "1",
       "name": "Add Embed Field"
@@ -89,7 +98,7 @@
     {
       "storage": "1",
       "varName": "Embed-good",
-      "fieldName": "Verwarnungen",
+      "fieldName": "Infractions",
       "message": "${tempVars(\"Warn-Points\")}",
       "inline": "1",
       "name": "Add Embed Field"
