@@ -1,0 +1,190 @@
+{
+  "name": "automod",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hdzIg",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "ban/kick",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "comment": "███ Set Kick",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "ban/kick",
+      "comparison": "1",
+      "value": "kick",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.kick",
+      "changeType": "0",
+      "value": "tempVars(\"amount\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Automod-Kick was set to: `${tempVars(\"amount\")}`**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.kick",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Automod-Kick was disabled**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "███ Set Ban",
+      "color": "#ffff00",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "ban/kick",
+      "comparison": "1",
+      "value": "ban",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "21",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.ban",
+      "changeType": "0",
+      "value": "tempVars(\"amount\")",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Automod-Ban was set to: `${tempVars(\"amount\")}`**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "count": "2",
+      "name": "Skip Actions"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.ban",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Automod-Ban was disabled**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.kick",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "am.kick",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "automod.ban",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "am.ban",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Automod-Help**\n[p]automod <kick|ban> <amount|0>\n_If you set Automod to `0` then Automod will be disabled!_\n\nCurrently:\n```\nUser get kicked out of your server if they have more then ${tempVars(\"am.kick\")} strikes.\n\nUser get banned out of your server if they have more then ${tempVars(\"am.ban\")} strikes.\n```",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
