@@ -2,7 +2,7 @@
 RawDatas on this Github are every up to date!
 __________
 ### How to Install
-- Click on "Clone" & Download .zip
+- Click on "Clone & Download" > .zip || or click [here](https://github.com/MauriceX24/DBM/archive/master.zip) to start download
 - Create a new folder
 - Copy the .zip file in your folder and extract this
 - Search your System & open this file
