@@ -20,7 +20,7 @@
     },
     {
       "into": "1",
-      "vAria": "YOUR API KEY",
+      "vAria": "trnsl.1.1.20190414T182413Z.92b94ac8169af008.c13fbc6af0999c640ebf575f17e6f0358c730048",
       "storage": "1",
       "varName2": "test",
       "name": "Convert a Variable"
@@ -32,8 +32,31 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "8",
+      "iffalseVal": "10",
       "name": "Check Parameters"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://translate.yandex.net/api/v1.5/tr.json/translate?lang=${tempVars(\"language-tolanguage\")}&text=${tempVars(\"text1\")}&key=${tempVars(\"test\")}",
+      "path": "code",
+      "storage": "1",
+      "varName": "success?",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "1",
+      "varName": "success?",
+      "comparison": "6",
+      "value": "\"501|400|0\"",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "12",
+      "name": "Check Variable"
     },
     {
       "token": "",
@@ -64,6 +87,19 @@
       "channel": "0",
       "varName": "",
       "message": "**What did you mean?**\n[p]translate <en-ru> <Text>\n[p]translatelist",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Uhhhh sorry**\nI cant translate this. Do [p]translatelist to get my languages.",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
