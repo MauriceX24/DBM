@@ -11,5 +11,5 @@ _____
 ![Alt-Text](https://madebyme.s-ul.eu/VottJRnJ)
 ![Alt-Text](https://madebyme.s-ul.eu/xEQ5zmbR)
 ### Now you can test it
-All languages you can find [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
+- All languages you can find [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
 ![Alt-Text](https://madebyme.s-ul.eu/kd2BbtiR)
