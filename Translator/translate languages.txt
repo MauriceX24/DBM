@@ -1,0 +1,40 @@
+{
+  "name": "translatelist",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "AXVWd",
+  "actions": [
+    {
+      "into": "1",
+      "vAria": "trnsl.1.1.20190414T182413Z.92b94ac8169af008.c13fbc6af0999c640ebf575f17e6f0358c730048",
+      "storage": "1",
+      "varName2": "test",
+      "name": "Convert a Variable"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://translate.yandex.net/api/v1.5/tr.json/getLangs?ui=${tempVars(\"en\")}&key=${tempVars(\"test\")}",
+      "path": "dirs",
+      "storage": "1",
+      "varName": "Result1",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"Result1\")}",
+      "storage": "0",
+      "varName2": "Result2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
