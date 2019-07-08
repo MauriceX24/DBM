@@ -3,7 +3,7 @@ _____
 
 - Go to **https://translate.yandex.com/developers/** and create a Account.
 - Create your API-Key and paste it in **Action #3**
-- Finish
+- Finish - All languages you can find [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
 
 ### Screenshots
 
@@ -11,5 +11,5 @@ _____
 ![Alt-Text](https://madebyme.s-ul.eu/VottJRnJ)
 ![Alt-Text](https://madebyme.s-ul.eu/xEQ5zmbR)
 ### Now you can test it
-- All languages you can find [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
+
 ![Alt-Text](https://madebyme.s-ul.eu/kd2BbtiR)
