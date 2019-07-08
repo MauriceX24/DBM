@@ -1,7 +1,7 @@
 # Translate System
 _____
 
-- Go to **https://translate.yandex.com/developers/** and create a Account.
+- Go to **https://translate.yandex.com/developers/** and create a Account. [Languages](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
 - Create your API-Key and paste it in **Action #3**
 - Finish
 
@@ -12,6 +12,3 @@ _____
 ![Alt-Text](https://madebyme.s-ul.eu/xEQ5zmbR)
 ### Now you can test it
 ![Alt-Text](https://madebyme.s-ul.eu/kd2BbtiR)
---------
-# Important
-## Many languages don't working together - Like `EN-JP`. Do **[p]translatelist** to get all working formats.
