@@ -20,7 +20,7 @@
     },
     {
       "into": "1",
-      "vAria": "YOUR API KEY",
+      "vAria": "PASTE YOUR API KEY",
       "storage": "1",
       "varName2": "test",
       "name": "Convert a Variable"
