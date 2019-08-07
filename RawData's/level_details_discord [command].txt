@@ -1,7 +1,5 @@
-
-
 {
-  "name": "mylevel",
+  "name": "level",
   "permissions": "NONE",
   "restriction": "1",
   "_id": "Vusvz",
@@ -44,9 +42,13 @@
     {
       "behavior": "0",
       "interpretation": "0",
-      "code": "//100 * tempVars(\"myxp\") / tempVars(\"exp to next level\")%\n\nvar input = 100; //Deine Zahl\nvar expo = tempVars(\"myxp\"); //Dein Exponent\nvar expo2 = tempVars(\"exp to next level\"); //Dein Exponent\nvar result = (input * expo / expo2);\nresult //Gibt das Ergebnis zurück",
+      "inspectation": "0",
+      "depth": "1",
+      "code": "//100 * tempVars(\"myxp\") / tempVars(\"exp to next level\")%\n\nvar input = 100; //Deine Zahl\nvar expo = tempVars(\"myxp\"); //Dein Exponent\nvar expo2 = tempVars(\"exp to next level\"); //Dein Exponent\nvar result = (input * expo / expo2);\nMath.round(result); //Gibt das Ergebnis zurück",
       "storage": "1",
       "varName": "test2",
+      "storage2": "4",
+      "varName2": "",
       "name": "Run Script"
     },
     {
@@ -333,7 +335,7 @@
       "storage": "1",
       "varName": "Embed",
       "fieldName": "Stats",
-      "message": "${tempVars(\"mylvl\")} [░](https://imgur.com/a/HT2qQvo)██████████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") + 1}",
+      "message": "${tempVars(\"mylvl\")} [░](https://imgur.com/a/HT2qQvo)██████████ ${tempVars(\"test2\")}% | ${tempVars(\"mylvl\") +1}",
       "inline": "1",
       "name": "Add Embed Field"
     },
@@ -346,5 +348,9 @@
       "varName3": "",
       "name": "Send Embed Message"
     }
+  ],
+  "_aliases": [
+    "lvl",
+    "xp"
   ]
 }
