@@ -1,0 +1,58 @@
+{
+  "name": "MuteChannelSynchro",
+  "temp": "chnannel",
+  "event-type": "8",
+  "_id": "JiTcu",
+  "actions": [
+    {
+      "info": "1",
+      "find": "Muted",
+      "storage": "1",
+      "varName": "Role.Muted",
+      "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "Role.Muted",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "3",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "3",
+      "varName": "chnannel",
+      "role": "3",
+      "varName2": "Role.Muted",
+      "permission": "SEND_MESSAGES",
+      "state": "2",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "5",
+      "varName": "chnannel",
+      "message": "**Synchronisierung mit `Muted` abgeschlossen**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "5",
+      "varName": "chnannel",
+      "message": "**Es wurde keine Rolle mit dem Namen `Muted` gefunden!**",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
