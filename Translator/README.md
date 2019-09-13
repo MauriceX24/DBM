@@ -5,8 +5,8 @@ _____
 - Click [here](https://translate.yandex.com/developers) for the Developer site
 - Create your API-Key and paste it in **Action #3**
 - Finish - All languages you can find [here](https://tech.yandex.com/translate/doc/dg/concepts/api-overview-docpage/)
-
-### How to this Error (statusCode:0)
+------
+### I get a Error (statusCode:0) HELP?!
 - Paste in your API-Key in **Action #6**
 ![Alt-Text](https://madebyme.s-ul.eu/oo9iL74W)
 ### Screenshots
