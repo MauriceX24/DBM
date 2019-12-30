@@ -1,8 +1,12 @@
-Moiiin ich mag Pudding ^^
+### Der h√§ufigste Fehler
+Wenn bei dir die **Action 18 und 8** im neuen !bank Befehl fehlen, installiere die Mods
+von DBM-Network oder [hier](https://madebyme.s-ul.eu/yudrJynV) & [hier](https://madebyme.s-ul.eu/qAtaEXVm)
+
+
 
 Alle Commands mit "!" sind Admin Befehle.
-Ich vermute durch die ‹bertragung von PC zu PC wurden die Cooldowns deaktiviert.
-Das heiﬂt du, ja du...musst sie wieder aktivieren.
+Ich vermute durch die √úbertragung von PC zu PC wurden die Cooldowns deaktiviert.
+Das hei√üt du, ja du...musst sie wieder aktivieren.
 
 Rechtsklick auf "work" > Adjust Time Restriction  // Da habe ich z.B 16h
 
@@ -10,6 +14,6 @@ Das selbe hab ich auch bei
 Rechtsklick auf "rob" > Adjust Time Restriction  // mit 30min
 Rechtsklick auf "daily" > Adjust Time Restriction  // mit 24h
 
-!! Ich empfehle keine ‰nderungen vorzunehmen, wenn du nicht weiﬂt, wie man die Actions wieder richtig schiebt !!
+!! Ich empfehle keine √§nderungen vorzunehmen, wenn du nicht wei√üt, wie man die Actions wieder richtig schiebt !!
 
 Wenn irgendwelche Fehler auftreten, bitte bei MauriceX#1520 melden. Der ist voll lol xd
