@@ -2,6 +2,22 @@
 Wenn bei dir die **Action 18 und 8** im neuen !bank Befehl fehlen, installiere die Mods
 von DBM-Network oder [hier](https://madebyme.s-ul.eu/yudrJynV) & [hier](https://madebyme.s-ul.eu/qAtaEXVm)
 
+## Command & Bedeutung
+| Command | Was macht der? | Permissions|
+|---------|----------------|------------|
+|bank| Ein/Auszahlungen | Jeder |
+|money | Geldstand zeigen | Jeder |
+|money pay | Schickt Geld an User | Jeder |
+|bank!add | Fügt Geld zur Bank hinzu | ADMIN |
+|bank!remove | Entfernt Geld von Bank | ADMIN |
+|bank!set | Setzt Bank-Guthaben | ADMIN |
+|bank!show | Zeigt Bank-Guthaben | ADMIN |
+|money!add | Fügt Geld hinzu | ADMIN |
+|money!remove | Entfernt Geld | ADMIN |
+|money!set | Setzt Geldstand | ADMIN |
+|rob | Raubt andere aus | Jeder |
+
+
 
 
 Alle Commands mit "!" sind Admin Befehle.
