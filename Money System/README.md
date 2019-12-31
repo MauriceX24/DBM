@@ -1,6 +1,6 @@
 ### Der häufigste Fehler
 Wenn bei dir die **Action 18 und 8** im neuen !bank Befehl fehlen, installiere die Mods
-von DBM-Network oder [hier](https://madebyme.s-ul.eu/yudrJynV) & [hier](https://madebyme.s-ul.eu/qAtaEXVm)
+von DBM-Network oder [hier](https://madebyme.s-ul.eu/yudrJynV) & [hier](https://madebyme.s-ul.eu/IkYArDHy)
 
 ## Command & Bedeutung
 | Command | Was macht der? | Permissions|
