@@ -8,6 +8,7 @@ von DBM-Network oder [hier](https://madebyme.s-ul.eu/yudrJynV) & [hier](https://
 |bank| Ein/Auszahlungen | Jeder |
 |money | Geldstand zeigen | Jeder |
 |money pay | Schickt Geld an User | Jeder |
+|**money GET**| Gibt Geld durch's Chatten | Absolut jeder|
 |bank!add | Fügt Geld zur Bank hinzu | ADMIN |
 |bank!remove | Entfernt Geld von Bank | ADMIN |
 |bank!set | Setzt Bank-Guthaben | ADMIN |
