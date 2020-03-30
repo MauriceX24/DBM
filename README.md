@@ -1,5 +1,5 @@
 # RawData's and Systems for DBM
-RawDatas on this Github are every up to date!
+Problems? Contact me on Discord (MauriceX#1520)
 __________
 ### How to Install Mods
 Zur Installation 
