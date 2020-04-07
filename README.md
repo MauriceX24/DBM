@@ -2,6 +2,7 @@
 Problems? Contact me on Discord (MauriceX#1520)
 __________
 ### How to Install Mods
+- After you downloaded the [latest Mods](https://github.com/dbm-network/mods/tree/beta)
 - Open DBM > "Project" -> Open Actions Folder 
 - Paste in your Mods (Replace older files if they need it)
 - Go to `C:\Program Files (x86)\Steam\steamapps\common\Discord Bot Maker` > in "actions"-folder and paste in your Mods.
