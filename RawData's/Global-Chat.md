@@ -1,9 +1,9 @@
 # Global-Chat
 --------------------
 ### Dieses System besteht aus einem
-### [Event](https://github.com/MauriceX24/DBM/new/master/RawData's#Event "Klick zum Event") 
+### [Event](https://github.com/MauriceX24/DBM/blob/master/RawData's/Global-Chat.md#event-1 "Klick zum Event") 
 ### und einem 
-### [Command](https://github.com/MauriceX24/DBM/new/master/RawData's#Command "Klick zum Command")
+### [Command](https://github.com/MauriceX24/DBM/blob/master/RawData's/Global-Chat.md#command-1 "Klick zum Command")
 
 ## Screenshots
 ![image1](https://moon.is-inside.me/I95J5UDd.png "Erstelle deinen Chat-Namen")
