@@ -1,5 +1,5 @@
 # RawData's and Systems for DBM
-Problems? Contact me on Discord (MauriceX#1520)
+Problems? Discord (MauriceX#1520)
 __________
 ### How to Install Mods
 - After you downloaded the [latest Mods](https://github.com/dbm-network/mods/tree/beta)
