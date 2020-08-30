@@ -1,5 +1,11 @@
 # RawData's and Systems for DBM
 Problems? Discord (MauriceX#1520)
+
+___________
+> ### Achtung - Veraltete RawData's
+> Aufgrund der neuen DBM Version sind alle RawDatas womöglich nicht mehr
+> funktionsfähig. Derzeit wird keine "erneuerung" der RawDatas vorgesehen.
+
 __________
 ### How to Install Mods
 - After you downloaded the [latest Mods](https://github.com/dbm-network/mods/tree/beta)
